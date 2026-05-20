@@ -71,7 +71,7 @@ export default function SearchPage() {
           <div>
             <h1 style={styles.title}>
               {q ? (
-                <>Results for <em style={{ color: '#e63946' }}>"{q}"</em></>
+                <>Results for <em style={{ color: '#e63946' }}>&ldquo;{q}&rdquo;</em></>
               ) : (
                 'Search'
               )}
@@ -156,7 +156,7 @@ export default function SearchPage() {
         {!loading && !error && q && articles.length === 0 && (
           <div style={styles.noResults}>
             <p style={{ fontSize: '2rem' }}>🔍</p>
-            <p>No articles found for <strong>"{q}"</strong>. Try a different search term.</p>
+            <p>No articles found for <strong>&ldquo;{q}&rdquo;</strong>. Try a different search term.</p>
           </div>
         )}
       </div>

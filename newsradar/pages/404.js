@@ -7,7 +7,7 @@ export default function NotFound() {
       <div style={styles.wrap}>
         <p style={styles.code}>404</p>
         <h1 style={styles.title}>Page not found</h1>
-        <p style={styles.msg}>This headline didn't make it to print.</p>
+        <p style={styles.msg}>This headline didn&apos;t make it to print.</p>
         <Link href="/" style={styles.btn}>Back to Top Stories →</Link>
       </div>
     </Layout>
