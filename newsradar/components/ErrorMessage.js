@@ -4,12 +4,12 @@ export default function ErrorMessage({ message }) {
       <div style={styles.icon}>⚠️</div>
       <h3 style={styles.title}>Something went wrong</h3>
       <p style={styles.msg}>{message}</p>
-      {message?.includes('NEWS_API_KEY') && (
+      {message?.includes('GNEWS_API_KEY') && (
         <div style={styles.hint}>
           <strong>Setup hint:</strong> Rename <code style={styles.code}>.env.local.example</code> to{' '}
           <code style={styles.code}>.env.local</code> and add your free API key from{' '}
-          <a href="https://newsapi.org/register" target="_blank" rel="noopener noreferrer" style={styles.link}>
-            newsapi.org
+          <a href="https://gnews.io" target="_blank" rel="noopener noreferrer" style={styles.link}>
+            gnews.io
           </a>
         </div>
       )}

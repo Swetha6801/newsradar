@@ -43,9 +43,9 @@ cd newsradar
 npm install
 ```
 
-### 2. Get a free NewsAPI key
+### 2. Get a free GNews API key
 
-Sign up at [newsapi.org/register](https://newsapi.org/register) — it's free and takes 30 seconds.
+Sign up at [gnews.io](https://gnews.io) — it's free and takes 30 seconds.
 
 ### 3. Set up your environment
 
@@ -55,7 +55,7 @@ cp .env.local.example .env.local
 ```
 
 ```env
-NEWS_API_KEY=your_key_here
+GNEWS_API_KEY=your_key_here
 ```
 
 ### 4. Run the dev server
@@ -104,7 +104,7 @@ npm install -g vercel
 vercel
 ```
 
-Add `NEWS_API_KEY` in your Vercel project's **Environment Variables** settings.
+Add `GNEWS_API_KEY` in your Vercel project's **Environment Variables** settings.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/YOUR_USERNAME/newsradar)
 
@@ -113,7 +113,7 @@ Add `NEWS_API_KEY` in your Vercel project's **Environment Variables** settings.
 ## 📖 Key Architecture Decisions
 
 ### Why API Routes as a proxy?
-The NewsAPI key must never be exposed to the browser. API Routes run on the server, so the key stays secure. The browser only calls `/api/headlines` — our own endpoint.
+The GNews API key must never be exposed to the browser. API Routes run on the server, so the key stays secure. The browser only calls `/api/headlines` — our own endpoint.
 
 ### SSR vs ISR vs Client-side — when to use each?
 - **SSR** (`getServerSideProps`): Headlines change every minute → always fresh.
